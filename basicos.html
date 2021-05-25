@@ -9,14 +9,36 @@
 <body>
     <h1>Fundamentos JavaScript</h1>
     <script>
+        // En los navegadores window es el objeto global de JS
          //si se declara con var es Ambito global
         var hola = "Hola Mundo";
         //si se declara con let es Ambito de Bloque
         console.log(hola);
+        // uN BLOQUE ES LO QUE ESTA ENTRE UN JUEGO DE LLAVES O curly braces
+        // No es buena practica usar var
         if(true){
             let a = 3;
             console.log(a);
         }
+        // Const se usa para guardar variables que no vayana a cambiar nunca su valor
+        const PI = 3.1416;
+        console.log(PI);
+        //Los valores primitivs no se pueden declarar con const (string, number, boolean, null, undefined, Nan)
+        //Los valores compuestos si se pueden declarar con const(Arrays[], Objetos{}, Function(){}, Class{})
+        // Como crear un Objeto
+        let objeto = {
+            nombre: "Elian",
+            edad: 42
+        }
+        let colores = ["Blanco", "Negro", "Azul"]
+        console.log(objeto);
+        console.log(colores);
+        objeto.correo = "elian@gmail.com";
+        console.log(objeto);
+        //push para agregar datos al array
+        colores.push("anaranjado");
+        console.log(colores);
+
     </script>
     
 </body>
