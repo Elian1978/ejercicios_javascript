@@ -42,21 +42,43 @@
         //Cadenas de Texto aka Strings
         //trim elima caracteres vacioa al inicio y al final de la Cadena
         //split Convertir cadena string a arreglo
-        let nombre = 'Elian';
-        let apellido = 'Rojas';
-        let saludo = new String("Hola Mundo");
-        lorem = "Lorem dolorum amet";
-        console.log(nombre.length, 
-                    apellido.length, 
-                    saludo.length,
-                    nombre.toUpperCase(),
-                    apellido.toLowerCase(),
-                    lorem.includes("amet"),
-                    lorem.includes("Elian"),
-                    lorem.trim(),
-                    lorem.split(" "),
+        // let nombre = 'Elian';
+        // let apellido = 'Rojas';
+        // let saludo = new String("Hola Mundo");
+        // lorem = "Lorem dolorum amet";
+        // console.log(nombre.length, 
+        //             apellido.length, 
+        //             saludo.length,
+        //             nombre.toUpperCase(),
+        //             apellido.toLowerCase(),
+        //             lorem.includes("amet"),
+        //             lorem.includes("Elian"),
+        //             lorem.trim(),
+        //             lorem.split(" "),
                     
-        );
+        // );
+        
+
+        // Concatenacion
+        let nombre = "Elian";
+        let apellido = "Rojas";
+        let saludo = "Hola mi nombre es:" + nombre + " " + apellido + ".";
+        console.log(saludo);
+
+        // Interpolacion
+        //  Template String
+        let saludo2 = `Hola mi nombre es: ${nombre} ${apellido}.`;
+        console.log(saludo2);
+        let ul = `
+            <ul>
+                <li>Primavera</li>
+                <li>Verano/li>
+                <li>Otoño</li>
+                <li>Invierno</li>
+            </ul>`
+        console.log(ul);
+
+
     </script>
     
 </body>
