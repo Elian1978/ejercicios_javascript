@@ -9,7 +9,7 @@
 <body>
     <h1>Fundamentos JavaScript</h1>
     <script>
-        // En los navegadores window es el objeto global de JS
+       /*  // En los navegadores window es el objeto global de JS
          //si se declara con var es Ambito global
         var hola = "Hola Mundo";
         //si se declara con let es Ambito de Bloque
@@ -37,8 +37,26 @@
         console.log(objeto);
         //push para agregar datos al array
         colores.push("anaranjado");
-        console.log(colores);
-
+        console.log(colores); */
+        // Para ver los metodos string podemos revisar la documentacion en MDN (Mozilla development network)
+        //Cadenas de Texto aka Strings
+        //trim elima caracteres vacioa al inicio y al final de la Cadena
+        //split Convertir cadena string a arreglo
+        let nombre = 'Elian';
+        let apellido = 'Rojas';
+        let saludo = new String("Hola Mundo");
+        lorem = "Lorem dolorum amet";
+        console.log(nombre.length, 
+                    apellido.length, 
+                    saludo.length,
+                    nombre.toUpperCase(),
+                    apellido.toLowerCase(),
+                    lorem.includes("amet"),
+                    lorem.includes("Elian"),
+                    lorem.trim(),
+                    lorem.split(" "),
+                    
+        );
     </script>
     
 </body>
