@@ -94,8 +94,11 @@
         //Esto es un error porque esta concatenando los valores
         console.log(c+d);
         //Lo correcto seria aplicar el ParseInt, sin embargo solo me suma la parte entera
+        //Number es el constructor
         console.log(c+parseInt(d));
         console.log(c+parseFloat(d));
+        console.log(c+Number.parseInt(d));
+        console.log(c+Number.parseFloat(d));
 
     </script>
     
