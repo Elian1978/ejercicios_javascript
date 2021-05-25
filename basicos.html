@@ -78,50 +78,98 @@
         //     </ul>`
         // console.log(ul);
 
-        // Tipos de Datos
-        let a = 2;
-        let b = new Number(1);
-        let c = 7.9;
-        let d = "5.6";
+        // // Tipos de Datos
+        // let a = 2;
+        // let b = new Number(1);
+        // let c = 7.9;
+        // let d = "5.6";
 
-        console.log(a,b);
-        console.log(c.toFixed(1));
-        console.log(c.toFixed(5));
-        console.log(parseInt(c));
-        console.log(parseFloat(c));
-        console.log(typeof c, typeof d);
-        console.log(a+b);
-        //Esto es un error porque esta concatenando los valores
-        console.log(c+d);
-        //Lo correcto seria aplicar el ParseInt, sin embargo solo me suma la parte entera
-        //Number es el constructor
-        console.log(c+parseInt(d));
-        console.log(c+parseFloat(d));
-        console.log(c+Number.parseInt(d));
-        console.log(c+Number.parseFloat(d));
+        // console.log(a,b);
+        // console.log(c.toFixed(1));
+        // console.log(c.toFixed(5));
+        // console.log(parseInt(c));
+        // console.log(parseFloat(c));
+        // console.log(typeof c, typeof d);
+        // console.log(a+b);
+        // //Esto es un error porque esta concatenando los valores
+        // console.log(c+d);
+        // //Lo correcto seria aplicar el ParseInt, sin embargo solo me suma la parte entera
+        // //Number es el constructor
+        // console.log(c+parseInt(d));
+        // console.log(c+parseFloat(d));
+        // console.log(c+Number.parseInt(d));
+        // console.log(c+Number.parseFloat(d));
 
-        let verdadero = true;
-        let falso = false;
-        console.log(typeof verdadero, typeof false);
-        //Datos que tienden a valores verdadero o Falso
-        //Podemos ver la documentacion MDN  Truthy or Falsy
-        console.log(Boolean(0));
-        console.log(Boolean(-1));
-        console.log(Boolean(""));
-        console.log(Boolean("hh"));
+        // let verdadero = true;
+        // let falso = false;
+        // console.log(typeof verdadero, typeof false);
+        // //Datos que tienden a valores verdadero o Falso
+        // //Podemos ver la documentacion MDN  Truthy or Falsy
+        // console.log(Boolean(0));
+        // console.log(Boolean(-1));
+        // console.log(Boolean(""));
+        // console.log(Boolean("hh"));
 
 
-        // Valor Null and undefined repesentaN Una variable que no tiene valor
-        // Undefined repesenta una variable no inicializada por ej:
-        let indefinida;
-        console.log(indefinida);
-        // null es un valor vacio asignado intencionalmente por el  programador
-        // Undefined es un valor asignado por Javascript cuando detecta una variable sin valor
-        let nulo = null;
-        console.log(nulo);
-        // NaN = Not at Number (El Dato no es un numero)
-        let noEsUnNumero = "Hola"*3.7;
-        console.log(noEsUnNumero);
+        // // Valor Null and undefined repesentaN Una variable que no tiene valor
+        // // Undefined repesenta una variable no inicializada por ej:
+        // let indefinida;
+        // console.log(indefinida);
+        // // null es un valor vacio asignado intencionalmente por el  programador
+        // // Undefined es un valor asignado por Javascript cuando detecta una variable sin valor
+        // let nulo = null;
+        // console.log(nulo);
+        // // NaN = Not at Number (El Dato no es un numero)
+        // let noEsUnNumero = "Hola"*3.7;
+        // console.log(noEsUnNumero);
+
+        // Functions: Es un bloque de código autocontenido, es decir que tiene su propio contenido independiente al
+        // Scoope o al ambito global del programa.  La puedo reutilizar las veces que sea necesario.
+
+        //Funcion Declarada
+        function estoEsUnaFuncion(){
+            console.log("Uno");
+            console.log("Dos");
+            console.log("Tres");
+        }
+        //Invocacion de Funciones
+        estoEsUnaFuncion();
+
+        function unaFuncionQueDevuelveValor(){
+            console.log("Uno");
+            console.log("Dos");
+            console.log("Tres");
+            return "La Funcion ha devuelto una cadena de texto"
+
+        }
+        let valorDeFuncion = unaFuncionQueDevuelveValor();
+        console.log(valorDeFuncion);
+
+        function saludar(nombre="Desconocido", edad=0){
+            console.log(`Hola mi nombre es: ${nombre} y tengo ${edad} años`)          
+
+        }
+        funcionDeclarada();
+
+        saludar("Caleb", 11);
+        saludar();
+
+        // Funciones Declaradas vrs Funciones Expresadas
+        //Siempre Javascript lo primero que Ordena son las Variables y funciones, eleva el ambito de la funcion, por lo que puedo
+        //llamarlo de cualquier lugar.
+
+        function funcionDeclarada(){
+            console.log("Esto es una funcion declarada, puede invocarse en cualquier parte de nuestro codigo, incluso antes de que la funcion sea declarada")
+        }
+        funcionDeclarada();
+        //Tambien puedo asignar una funcion a una variable o constante es una funcion anonima
+        // funcionExpresada();
+        const funcionExpresada = function(){
+            console.log('Esto es una funcion expresada, es decir una funcion que se le ha asignado como valor a una variable')
+            console.log('si invocamos esta funcion antes de su definicion JS nos dira: "Uncaught ReferenceError: cant access lexical declaration funcionExpresada before initialization"')
+        }
+
+        funcionExpresada();
 
     </script>
     
