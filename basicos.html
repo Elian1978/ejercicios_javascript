@@ -171,34 +171,78 @@
 
         // funcionExpresada();
 
-        const b = [1, true, "Hola", ["A","B","C"]];
-        console.log(b);
-        console.log(b.length);
-        console.log(b[2]);
-        console.log(b[3][2]);
+        // const b = [1, true, "Hola", ["A","B","C"]];
+        // console.log(b);
+        // console.log(b.length);
+        // console.log(b[2]);
+        // console.log(b[3][2]);
 
-        const c = Array.of("X", 1,4,8, "D", false);
+        // const c = Array.of("X", 1,4,8, "D", false);
+        // console.log(c);
+
+        // //Metodo para signarle mismo valor a todas las posiciones de un arreglo
+
+        // const d = Array(100).fill(false);
+        // console.log(d);
+
+        // //Metodos de Arrelos. Revisar la documentacion en MDN (Mozilla development network)
+        // const colores = ["Rojo", "Verde", "Azul", "Blanco"];
+        // console.log(colores);
+
+        // colores.push("Negro");
+        // console.log(colores);
+
+        // colores.pop("Negro");
+        // console.log(colores);
+
+        // colores.forEach(function(el, index){
+        //     console.log(`<li id="${index}">${el}</li>`)
+        // })
+        //Forma Nueva de declarar Objetos
+        const b = {};
+        console.log(b);
+        //Forma Antigua de declarar Objetos, ya no se usa
+        const c = new Object();
         console.log(c);
 
-        //Metodo para signarle mismo valor a todas las posiciones de un arreglo
+        const elian = {
+            nombre: "Elian",
+            apellido: "Rojas",
+            edad: 42,
+            pasatiempos: ["Correr", "Hacer ejercicio", "Enseñar"],
+            soltero: false,
+            contacto: {
+                email: "elian@gmail.com",
+                twitter: "o tengo",
+                movil:" 56729876",
+            },
+            saludar: function(){
+                console.log("Hola:")
+            },
+            decirMiNombre: function(){
+            console.log(`Hola me llamo: ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes seguir en ${this.contacto.email}`)
+            }
+        }
+        // PUEDO ACCEDER AL VALOR DE UN OBJETO A TRAVES DE [], SIN EMBARGO NO ES TAN USADO
+        console.log(elian);
+        console.log(elian["nombre"]);
 
-        const d = Array(100).fill(false);
-        console.log(d);
+        // Dentro de un objeto a las variables se le llaman atributos o propiedades y
+        // A las funciones se les llama metodos.
+        //LA FORMA MAS USADA ES A TRAVES DE objeto.atributo
+        console.log(elian.pasatiempos[1]);
+        console.log(elian.contacto.email);
+        //Llamando la funcion saludar del objeto elian
+        elian.saludar();
+        elian.decirMiNombre();
+        // Conocer las llaves del Objeto
+        console.log(Object.keys(elian));
 
-        //Metodos de Arrelos. Revisar la documentacion en MDN (Mozilla development network)
-        const colores = ["Rojo", "Verde", "Azul", "Blanco"];
-        console.log(colores);
+        // Conocer los valoresdel Objeto
+        console.log(Object.values(elian));
 
-        colores.push("Negro");
-        console.log(colores);
-
-        colores.pop("Negro");
-        console.log(colores);
-
-        colores.forEach(function(el, index){
-            console.log(`<li id="${index}">${el}</li>`)
-        })
-
+        // Saber si un objeto tiene una propiedad
+        console.log(elian.hasOwnProperty("nombre"));
     </script>
     
 </body>
