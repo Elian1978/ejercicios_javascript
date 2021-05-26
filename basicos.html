@@ -126,50 +126,78 @@
         // Functions: Es un bloque de código autocontenido, es decir que tiene su propio contenido independiente al
         // Scoope o al ambito global del programa.  La puedo reutilizar las veces que sea necesario.
 
-        //Funcion Declarada
-        function estoEsUnaFuncion(){
-            console.log("Uno");
-            console.log("Dos");
-            console.log("Tres");
-        }
-        //Invocacion de Funciones
-        estoEsUnaFuncion();
+        // //Funcion Declarada
+        // function estoEsUnaFuncion(){
+        //     console.log("Uno");
+        //     console.log("Dos");
+        //     console.log("Tres");
+        // }
+        // //Invocacion de Funciones
+        // estoEsUnaFuncion();
 
-        function unaFuncionQueDevuelveValor(){
-            console.log("Uno");
-            console.log("Dos");
-            console.log("Tres");
-            return "La Funcion ha devuelto una cadena de texto"
+        // function unaFuncionQueDevuelveValor(){
+        //     console.log("Uno");
+        //     console.log("Dos");
+        //     console.log("Tres");
+        //     return "La Funcion ha devuelto una cadena de texto"
 
-        }
-        let valorDeFuncion = unaFuncionQueDevuelveValor();
-        console.log(valorDeFuncion);
+        // }
+        // let valorDeFuncion = unaFuncionQueDevuelveValor();
+        // console.log(valorDeFuncion);
 
-        function saludar(nombre="Desconocido", edad=0){
-            console.log(`Hola mi nombre es: ${nombre} y tengo ${edad} años`)          
+        // function saludar(nombre="Desconocido", edad=0){
+        //     console.log(`Hola mi nombre es: ${nombre} y tengo ${edad} años`)          
 
-        }
-        funcionDeclarada();
+        // }
+        // funcionDeclarada();
 
-        saludar("Caleb", 11);
-        saludar();
+        // saludar("Caleb", 11);
+        // saludar();
 
-        // Funciones Declaradas vrs Funciones Expresadas
-        //Siempre Javascript lo primero que Ordena son las Variables y funciones, eleva el ambito de la funcion, por lo que puedo
-        //llamarlo de cualquier lugar.
+        // // Funciones Declaradas vrs Funciones Expresadas
+        // //Siempre Javascript lo primero que Ordena son las Variables y funciones, eleva el ambito de la funcion, por lo que puedo
+        // //llamarlo de cualquier lugar.
 
-        function funcionDeclarada(){
-            console.log("Esto es una funcion declarada, puede invocarse en cualquier parte de nuestro codigo, incluso antes de que la funcion sea declarada")
-        }
-        funcionDeclarada();
-        //Tambien puedo asignar una funcion a una variable o constante es una funcion anonima
+        // function funcionDeclarada(){
+        //     console.log("Esto es una funcion declarada, puede invocarse en cualquier parte de nuestro codigo, incluso antes de que la funcion sea declarada")
+        // }
+        // funcionDeclarada();
+        // //Tambien puedo asignar una funcion a una variable o constante es una funcion anonima
+        // // funcionExpresada();
+        // const funcionExpresada = function(){
+        //     console.log('Esto es una funcion expresada, es decir una funcion que se le ha asignado como valor a una variable')
+        //     console.log('si invocamos esta funcion antes de su definicion JS nos dira: "Uncaught ReferenceError: cant access lexical declaration funcionExpresada before initialization"')
+        // }
+
         // funcionExpresada();
-        const funcionExpresada = function(){
-            console.log('Esto es una funcion expresada, es decir una funcion que se le ha asignado como valor a una variable')
-            console.log('si invocamos esta funcion antes de su definicion JS nos dira: "Uncaught ReferenceError: cant access lexical declaration funcionExpresada before initialization"')
-        }
 
-        funcionExpresada();
+        const b = [1, true, "Hola", ["A","B","C"]];
+        console.log(b);
+        console.log(b.length);
+        console.log(b[2]);
+        console.log(b[3][2]);
+
+        const c = Array.of("X", 1,4,8, "D", false);
+        console.log(c);
+
+        //Metodo para signarle mismo valor a todas las posiciones de un arreglo
+
+        const d = Array(100).fill(false);
+        console.log(d);
+
+        //Metodos de Arrelos. Revisar la documentacion en MDN (Mozilla development network)
+        const colores = ["Rojo", "Verde", "Azul", "Blanco"];
+        console.log(colores);
+
+        colores.push("Negro");
+        console.log(colores);
+
+        colores.pop("Negro");
+        console.log(colores);
+
+        colores.forEach(function(el, index){
+            console.log(`<li id="${index}">${el}</li>`)
+        })
 
     </script>
     
