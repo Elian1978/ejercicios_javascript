@@ -199,50 +199,89 @@
         //     console.log(`<li id="${index}">${el}</li>`)
         // })
         //Forma Nueva de declarar Objetos
-        const b = {};
-        console.log(b);
-        //Forma Antigua de declarar Objetos, ya no se usa
-        const c = new Object();
-        console.log(c);
+        // const b = {};
+        // console.log(b);
+        // //Forma Antigua de declarar Objetos, ya no se usa
+        // const c = new Object();
+        // console.log(c);
 
-        const elian = {
-            nombre: "Elian",
-            apellido: "Rojas",
-            edad: 42,
-            pasatiempos: ["Correr", "Hacer ejercicio", "Enseñar"],
-            soltero: false,
-            contacto: {
-                email: "elian@gmail.com",
-                twitter: "o tengo",
-                movil:" 56729876",
-            },
-            saludar: function(){
-                console.log("Hola:")
-            },
-            decirMiNombre: function(){
-            console.log(`Hola me llamo: ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes seguir en ${this.contacto.email}`)
-            }
-        }
-        // PUEDO ACCEDER AL VALOR DE UN OBJETO A TRAVES DE [], SIN EMBARGO NO ES TAN USADO
-        console.log(elian);
-        console.log(elian["nombre"]);
+        // const elian = {
+        //     nombre: "Elian",
+        //     apellido: "Rojas",
+        //     edad: 42,
+        //     pasatiempos: ["Correr", "Hacer ejercicio", "Enseñar"],
+        //     soltero: false,
+        //     contacto: {
+        //         email: "elian@gmail.com",
+        //         twitter: "o tengo",
+        //         movil:" 56729876",
+        //     },
+        //     saludar: function(){
+        //         console.log("Hola:")
+        //     },
+        //     decirMiNombre: function(){
+        //     console.log(`Hola me llamo: ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes seguir en ${this.contacto.email}`)
+        //     }
+        // }
+        // // PUEDO ACCEDER AL VALOR DE UN OBJETO A TRAVES DE [], SIN EMBARGO NO ES TAN USADO
+        // console.log(elian);
+        // console.log(elian["nombre"]);
 
-        // Dentro de un objeto a las variables se le llaman atributos o propiedades y
-        // A las funciones se les llama metodos.
-        //LA FORMA MAS USADA ES A TRAVES DE objeto.atributo
-        console.log(elian.pasatiempos[1]);
-        console.log(elian.contacto.email);
-        //Llamando la funcion saludar del objeto elian
-        elian.saludar();
-        elian.decirMiNombre();
-        // Conocer las llaves del Objeto
-        console.log(Object.keys(elian));
+        // // Dentro de un objeto a las variables se le llaman atributos o propiedades y
+        // // A las funciones se les llama metodos.
+        // //LA FORMA MAS USADA ES A TRAVES DE objeto.atributo
+        // console.log(elian.pasatiempos[1]);
+        // console.log(elian.contacto.email);
+        // //Llamando la funcion saludar del objeto elian
+        // elian.saludar();
+        // elian.decirMiNombre();
+        // // Conocer las llaves del Objeto
+        // console.log(Object.keys(elian));
 
-        // Conocer los valoresdel Objeto
-        console.log(Object.values(elian));
+        // // Conocer los valoresdel Objeto
+        // console.log(Object.values(elian));
 
-        // Saber si un objeto tiene una propiedad
-        console.log(elian.hasOwnProperty("nombre"));
+        // // Saber si un objeto tiene una propiedad
+        // console.log(elian.hasOwnProperty("nombre"));
+
+        // Operadores
+        // Aritmeticos + - * / % -()
+
+        let a = 5 + (5 -10)* 3;
+        let modulo = 5%2; 
+        console.log(a);
+        console.log(modulo);
+
+        // Relacionales > < = <= >= == === != !==
+        console.log(8>9);
+        console.log(9>8);
+        console.log(8>=9);
+        console.log(8>9);
+
+
+        // UN = es asignacion de variables,
+        // == 2 iguales es una compracion de valores
+        // === 3 iguales igual completamente
+
+       /*  Incremento y decremento */
+        let i = 1;
+        i += 2;
+        console.log(i);
+
+        let o = 6;
+        o *= 2;
+        console.log(o);
+
+        // Operador urinario
+        i++;
+        i--;
+        ++i;
+        --i;
+ 
+        //Logicos
+        // ! Not  Niega lo que es es verdadero
+        // ||or  Una u otra opcion tiene que cumplirse
+        // && And Todas las condiciones tiene que cumplirse
     </script>
     
 </body>
