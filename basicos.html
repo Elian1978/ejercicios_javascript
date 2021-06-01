@@ -493,31 +493,61 @@
     // console.log(dog);
     // dog.ladrar(); 
     // El parametro Rest lo defino con 3 puntos suspensivos
-    function sumar(a, b, ...c) {
-      let resultado = a + b;
-      c.forEach(function (n) {
-        resultado += n
-      });
-      return resultado;
-    }
-    console.log(sumar(1, 2));
-    console.log(sumar(1, 2, 3));
-    console.log(sumar(1, 2, 3, 4));
-    console.log(sumar(1, 2, 3, 4, 5));
-    console.log(sumar(1, 2, 3, 4, 5, 6));
-    console.log(sumar(1, 2, 3, 4, 5, 6, 7));
+    // function sumar(a, b, ...c) {
+    //   let resultado = a + b;
+    //   c.forEach(function (n) {
+    //     resultado += n
+    //   });
+    //   return resultado;
+    // }
+    // console.log(sumar(1, 2));
+    // console.log(sumar(1, 2, 3));
+    // console.log(sumar(1, 2, 3, 4));
+    // console.log(sumar(1, 2, 3, 4, 5));
+    // console.log(sumar(1, 2, 3, 4, 5, 6));
+    // console.log(sumar(1, 2, 3, 4, 5, 6, 7));
 
-    // Spread Operator(son los 3 puntos suspensivos) ... Se usa en arreglos para no hacer push
-    const arr1 = [1, 2, 3, 4, 5],
-      arr2 = [6, 7, 8, 9, 0];
-    console.log(arr1, arr2);
-    const arr3 = [...arr1, ...arr2];
-    console.log(arr3); 
+    // // Spread Operator(son los 3 puntos suspensivos) ... Se usa en arreglos para no hacer push
+    // const arr1 = [1, 2, 3, 4, 5],
+    //   arr2 = [6, 7, 8, 9, 0];
+    // console.log(arr1, arr2);
+    // const arr3 = [...arr1, ...arr2];
+    // console.log(arr3); 
 
+    /* const saludar = () => console.log(`Hola`);
+    saludar();  */
 
+    /* const saludo = nombre => console.log(`Hola ${nombre}`);
+    saludo("Irma"); */
+    // El arrow function trae un retur implicito
+    // const sumar = function (a, b) {
+    //   return a + b;
+    //  } 
 
+    /* const sumar = (a, b) => a + b;
+    console.log(sumar(9, 9)); */
 
+    //  const funcionDeVariasLineas = () => {
+    //    console.log("Uno");
+    //    console.log("Dos");
+    //    console.log("Tres");
+    //  }
+    // funcionDeVariasLineas();
+    /* const numeros = [1, 2, 3, 4, 5];
+    numeros.forEach((el, index) => console.log(`${el} esta en la posición ${index}`)); */
+  
+    //    function Perro() {
+    //     console.log(this);
+    //   }
+    //   Perro(); 
 
+         /* const perro = {
+          nombre: "Tobby",
+          ladrar() {
+            console.log(this)
+          }
+        }
+        perro.ladrar();  */
 
 
     </script>
