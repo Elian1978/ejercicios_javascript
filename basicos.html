@@ -453,7 +453,7 @@
       }
       console.log(numeros[i]);
     }  */
-      const numeros = [1, 2, 3];
+  /*     const numeros = [1, 2, 3];
     //Sin destructuración
     let uno = numeros[0],
       dos = numeros[1],
@@ -465,10 +465,33 @@
     const persona = {
       nombre: "Elian",
       apellido: "Rojas",
-      edad: 42
+      edad: 
     };
     let { nombre, edad, apellido } = persona;
-    console.log(nombre, apellido, edad); 
+    console.log(nombre, apellido, edad);  */
+
+    let nombre = "Tobby",
+      edad = 7;
+    const perro = {
+      nombre: nombre,
+      edad: edad,
+      ladrar: function () {
+        console.log("guauu guauu!!!")
+      }
+    }
+    // En el objeto literal si la propiedad se llama igual al valor, no hace falta escribirlo 2 veces
+    console.log(perro);
+    perro.ladrar()
+    const dog = {
+      nombre,
+      edad,
+      raza: "Hogareño",
+      ladrar() {
+        console.log("guauu guauu guauu!!!")
+      }
+    }
+    console.log(dog);
+    dog.ladrar(); 
 
 
 
